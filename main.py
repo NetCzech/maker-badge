@@ -55,7 +55,7 @@ def get_temperature():
 # Function for display free RAM
 def get_ram():
      ram = gc.mem_free()
-     ram_mb = ram / 1024
+     ram_mb = ram
      return ram_mb
 
 # Function to display RAM in console/terminal 
@@ -208,7 +208,7 @@ screen5.append(create_text_object("press button 5", 1, display_black, 135, 70))
 screen5.append(create_text_object("Battery voltage:", 1, display_black, 5, 85))
 screen5.append(create_text_object("press button 5", 1, display_black, 135, 85))
 # - section of battery percentagle
-screen5.append(create_text_object("Battery percentagle:", 1, display_black, 5, 100))
+screen5.append(create_text_object("Battery percentage:", 1, display_black, 5, 100))
 screen5.append(create_text_object("press button 5", 1, display_black, 135, 100))
 
 # Set first screen as default
@@ -263,12 +263,12 @@ while True:
         screen5[5][0].text = str(f"{cpu_temperature:.2f} °C")
         # Display of free RAM
         free_ram = get_ram()
-        screen5[7][0].text = str(f"{free_ram:.2f} MB")
+        screen5[7][0].text = str(f"{free_ram} B")
         # Measure battery voltage
         battery_voltage, _, _ = get_voltage()
         voltage_text = str(f"{battery_voltage:.2f} V")
         screen5[9][0].text = voltage_text
-        # Convert voltage to percentage
+        # Display battery percentage
         battery_percentage = get_percentage(battery_voltage)
         screen5[11][0].text = str(f"{battery_percentage:.2f} %")
         activate_gui_layer(container, screen5)
