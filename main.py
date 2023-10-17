@@ -168,7 +168,7 @@ screen2.append(image_sprite)
 # Add text on the second screen
 screen2.append(create_text_object("Jakub SEMBERA", 1, display_black, 33, 75))
 screen2.append(create_text_object("+420 775 234 860", 1, display_black, 23, 90))
-screen2.append(create_text_object("jakub.sembera@gmail.com", 1, display_black, 2, 105))
+screen2.append(create_text_object("jakub.sembera@martia.cz", 1, display_black, 2, 105))
 
 #-------------------------------
 # Create third screen (screen3)
