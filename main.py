@@ -161,29 +161,37 @@ screen1.append(image_sprite)
 #-------------------------------
 screen2 = displayio.Group()
 screen2.append(displayio.TileGrid(display_background, pixel_shader=display_color_palette))
-# Load the image on the first screen
+# Load the image on the second screen
 screen2_image = displayio.OnDiskBitmap("/img/martia2.bmp")
 image_sprite = displayio.TileGrid(screen2_image, pixel_shader=screen2_image.pixel_shader)
 screen2.append(image_sprite)
+# Add text on the second screen
+screen2.append(create_text_object("Jakub SEMBERA", 1, display_black, 33, 75))
+screen2.append(create_text_object("+420 775 234 860", 1, display_black, 23, 90))
+screen2.append(create_text_object("jakub.sembera@gmail.com", 1, display_black, 2, 105))
 
 #-------------------------------
 # Create third screen (screen3)
 #-------------------------------
 screen3 = displayio.Group()
 screen3.append(displayio.TileGrid(display_background, pixel_shader=display_color_palette))
-screen3.append(create_text_object("TOTO JE", 3, display_black, 5, 20))
-screen3.append(create_text_object("TRETI", 3, display_black, 5, 60))
-screen3.append(create_text_object("OBRAZOVKA", 3, display_black, 5, 100))
+# Load the image on the third screen
+screen3_image = displayio.OnDiskBitmap("/img/pobocky.bmp")
+image_sprite = displayio.TileGrid(screen3_image, pixel_shader=screen3_image.pixel_shader)
+screen3.append(image_sprite)
 
 #-------------------------------
 # Create fourth screen (screen4)
 #-------------------------------
 screen4 = displayio.Group()
 screen4.append(displayio.TileGrid(display_background, pixel_shader=display_color_palette))
-# Load the first image on the first screen
+# Load the image on the fourth screen
 screen4_image = displayio.OnDiskBitmap("/img/simonscat.bmp")
 image_sprite = displayio.TileGrid(screen4_image, pixel_shader=screen4_image.pixel_shader)
 screen4.append(image_sprite)
+# Add text on the fourth screen
+screen4.append(create_text_object("My name is...", 1, display_black, 10, 20))
+screen4.append(create_text_object("GOD", 2, display_black, 200, 100))
 
 #-------------------------------
 # Create fifth screen (screen5)
@@ -212,7 +220,7 @@ screen5.append(create_text_object("Battery percentage:", 1, display_black, 5, 10
 screen5.append(create_text_object("press button 5", 1, display_black, 135, 100))
 
 # Set first screen as default
-activate_gui_layer(container, screen5)
+activate_gui_layer(container, screen1)
 display.show(container)
 display.refresh()
 
@@ -232,7 +240,7 @@ while True:
     if touch_2.value:
         printm("Press button 2")
         # Set LED to red
-        led_matrix.fill(led_red)
+        led_matrix.fill(led_off)
         led_matrix.show()
         activate_gui_layer(container, screen2)
         display.show(container)
@@ -240,7 +248,7 @@ while True:
     if touch_3.value:
         printm("Press button 3")
         # Set LED to green
-        led_matrix.fill(led_green)
+        led_matrix.fill(led_off)
         led_matrix.show()
         activate_gui_layer(container, screen3)
         display.show(container)
@@ -248,7 +256,7 @@ while True:
     if touch_4.value:
         printm("Press button 4")
         # Set LED to blue
-        led_matrix.fill(led_blue)
+        led_matrix.fill(led_off)
         led_matrix.show()
         activate_gui_layer(container, screen4)
         display.show(container)
