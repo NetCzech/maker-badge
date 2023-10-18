@@ -168,7 +168,7 @@ screen2.append(image_sprite)
 # Add text on the second screen
 screen2.append(create_text_object("Jakub SEMBERA", 1, display_black, 33, 75))
 screen2.append(create_text_object("+420 775 234 860", 1, display_black, 23, 90))
-screen2.append(create_text_object("jakub.sembera@gmail.com", 1, display_black, 2, 105))
+screen2.append(create_text_object("jakub.sembera@martia.cz", 1, display_black, 2, 105))
 
 #-------------------------------
 # Create third screen (screen3)
@@ -239,7 +239,7 @@ while True:
         display.refresh()
     if touch_2.value:
         printm("Press button 2")
-        # Set LED to red
+        # Turn off the LED
         led_matrix.fill(led_off)
         led_matrix.show()
         activate_gui_layer(container, screen2)
@@ -247,7 +247,7 @@ while True:
         display.refresh()
     if touch_3.value:
         printm("Press button 3")
-        # Set LED to green
+        # Turn off the LED
         led_matrix.fill(led_off)
         led_matrix.show()
         activate_gui_layer(container, screen3)
@@ -255,7 +255,7 @@ while True:
         display.refresh()
     if touch_4.value:
         printm("Press button 4")
-        # Set LED to blue
+        # Turn off the LED
         led_matrix.fill(led_off)
         led_matrix.show()
         activate_gui_layer(container, screen4)
