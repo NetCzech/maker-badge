@@ -1,5 +1,7 @@
 My CircuitPython code for electronic business card [Maker Badge](https://www.makermarket.cz/maker-badge/).
 
+![https://github.com/NetCzech/maker-badge/blob/3e36630f7859b08d106f8034f60413f942338f33/_makerPict/CircuitPython__logo.png](https://github.com/NetCzech/maker-badge/blob/3e36630f7859b08d106f8034f60413f942338f33/_makerPict/CircuitPython__logo.png)
+
 ---
 > **CircuitPython for Maker Badge:** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[https://circuitpython.org/board/maker_badge/](https://circuitpython.org/board/maker_badge/)
 ---
