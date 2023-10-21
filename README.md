@@ -1,9 +1,19 @@
 My CircuitPython code for electronic business card [Maker Badge](https://www.makermarket.cz/maker-badge/).
 
+---
+
+![https://github.com/NetCzech/maker-badge/blob/3e36630f7859b08d106f8034f60413f942338f33/_makerPict/CircuitPython__logo.png](https://github.com/NetCzech/maker-badge/blob/3e36630f7859b08d106f8034f60413f942338f33/_makerPict/CircuitPython__logo.png)
+
+---
+> **CircuitPython for Maker Badge:** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[https://circuitpython.org/board/maker_badge/](https://circuitpython.org/board/maker_badge/)
+---
+
 ### **More edits main.py*:*
 
-> [!ASSIGBIBG COLORS TO INDIVIDUAL LEDs:]
+> 1. :memo: **Setting the color of individual LEDs:**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- define colors in the program as needed
 
+```python
     if touch_1.value:
         printm("Press button 1")
         # Turn off the LED
@@ -15,18 +25,34 @@ My CircuitPython code for electronic business card [Maker Badge](https://www.mak
         activate_gui_layer(container, screen1) 
         display.show(container)
         display.refresh()
+```
 
-> [!NOTE]
-> colors can be defined in the program according to needs.
-  
+&nbsp;
+&nbsp;
 
-![https://github.com/NetCzech/maker-badge/blob/3e36630f7859b08d106f8034f60413f942338f33/_makerPict/CircuitPython__logo.png](https://github.com/NetCzech/maker-badge/blob/3e36630f7859b08d106f8034f60413f942338f33/_makerPict/CircuitPython__logo.png)
+> 2. :memo: **The LEDs flashes when the button is pressed**
+
+```python
+# Define LED blink
+def led_blink(pin, count):
+    for _ in range(count):
+        led_matrix.fill((led_blue))
+        led_matrix.show()
+        time.sleep(0.25)
+        led_matrix.fill((led_off))
+        led_matrix.show()
+        time.sleep(0.25)
+```
+```python
+    if touch_1.value:
+        printm("Press button 1")
+        activate_gui_layer(container, screen1)
+        display.show(container)
+        display.refresh()
+        led_blink(board.D18, 10)
+```
 
 ---
-> **CircuitPython for Maker Badge:** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[https://circuitpython.org/board/maker_badge/](https://circuitpython.org/board/maker_badge/)
----
-
-
 
 ### **Maker Badge:**
 
@@ -41,3 +67,4 @@ Maker Badge is primarily meant to be a name tag on actions such as Maker Faire, 
 
 > **Buy:**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[https://www.makermarket.cz/maker-badge/](https://www.makermarket.cz/maker-badge/)
 ---
+
