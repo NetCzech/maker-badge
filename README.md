@@ -36,7 +36,7 @@ My CircuitPython code for electronic business card [Maker Badge](https://www.mak
 # Define LED blink
 def led_blink(pin, count):
     for _ in range(count):
-        led_matrix.fill((led_blue))
+        led_matrix.fill(("your_color"))
         led_matrix.show()
         time.sleep(0.25)
         led_matrix.fill((led_off))
@@ -51,6 +51,8 @@ def led_blink(pin, count):
         display.refresh()
         led_blink(board.D18, "number of blink")
 ```
+:information_source: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;define "your_color" in the program as needed
+
 ---
 
 ### **Maker Badge:**
