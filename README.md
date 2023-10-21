@@ -11,21 +11,21 @@ My CircuitPython code for electronic business card [Maker Badge](https://www.mak
 ### **More edits main.py*:*
 
 > 1. :memo: **Setting the color of individual LEDs:**
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- define colors in the program as needed
 
 ```python
     if touch_1.value:
         printm("Press button 1")
         # Turn off the LED
-        led_matrix[0](<your_color)
-        led_matrix[1](<your_color)
-        led_matrix[2](<your_color)
-        led_matrix[3](<your_color)
+        led_matrix[0]("your_color")
+        led_matrix[1]("your_color")
+        led_matrix[2]("your_color")
+        led_matrix[3]("your_color")
         led_matrix.show()
         activate_gui_layer(container, screen1) 
         display.show(container)
         display.refresh()
 ```
+:information_source: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;define "your_color" in the program as needed
 
 &nbsp;
 &nbsp;
@@ -49,9 +49,8 @@ def led_blink(pin, count):
         activate_gui_layer(container, screen1)
         display.show(container)
         display.refresh()
-        led_blink(board.D18, 10)
+        led_blink(board.D18, "number of blink")
 ```
-
 ---
 
 ### **Maker Badge:**
