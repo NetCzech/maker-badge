@@ -1,10 +1,32 @@
 My CircuitPython code for electronic business card [Maker Badge](https://www.makermarket.cz/maker-badge/).
 
+### **More edits main.py*:*
+
+> [!ASSIGBIBG COLORS TO INDIVIDUAL LEDs:]
+
+    if touch_1.value:
+        printm("Press button 1")
+        # Turn off the LED
+        led_matrix[0](<your_color)
+        led_matrix[1](<your_color)
+        led_matrix[2](<your_color)
+        led_matrix[3](<your_color)
+        led_matrix.show()
+        activate_gui_layer(container, screen1) 
+        display.show(container)
+        display.refresh()
+
+> [!NOTE]
+> colors can be defined in the program according to needs.
+  
+
 ![https://github.com/NetCzech/maker-badge/blob/3e36630f7859b08d106f8034f60413f942338f33/_makerPict/CircuitPython__logo.png](https://github.com/NetCzech/maker-badge/blob/3e36630f7859b08d106f8034f60413f942338f33/_makerPict/CircuitPython__logo.png)
 
 ---
 > **CircuitPython for Maker Badge:** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[https://circuitpython.org/board/maker_badge/](https://circuitpython.org/board/maker_badge/)
 ---
+
+
 
 ### **Maker Badge:**
 
